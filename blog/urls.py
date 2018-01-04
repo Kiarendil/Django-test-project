@@ -22,6 +22,6 @@ from core import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', TemplateView.as_view(template_name='core/base.html'), name='index'),
-    url(r'^index/$', TemplateView.as_view(template_name='core/base.html'), name='index'),
+    url(r'^index/$', TemplateView.as_view(template_name='core/base.html')),
     url(r'^blogs/', include('blogs.urls')),
 ]
