@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, HttpResponse
-from django.views.generic import DetailView
+from django.views.generic import DetailView, ListView
 
 from core import models
 
@@ -19,6 +19,11 @@ def helloworld(reqest, name=None):
 def htmlhello(reqest, name=None):
 
     return render(reqest, 'core/base.html', {'name': name})
+
+
+class QuestionList(ListView):
+    template_name = 'core/question_list.html'
+    model = models.Question
 
 
 class QuestionDetail(DetailView):

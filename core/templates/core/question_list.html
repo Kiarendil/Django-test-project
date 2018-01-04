@@ -1,0 +1,11 @@
+{% extends "core/base.html" %}
+
+{% block title %}Список вопросов{% endblock %}
+
+{% block content %}
+    {% for question in object_list %}
+        <div>
+            <a href="{% url 'question' pk=question.id %}">{{ question.title }}</a>
+        </div>
+    {% endfor %}
+{% endblock %}
