@@ -31,3 +31,7 @@ class QuestionAdmin(admin.ModelAdmin):
 class AnswerAdmin(admin.ModelAdmin):
 
     list_display = 'id', 'question', 'author'
+
+s = 'abc'
+
+s.isdigit()

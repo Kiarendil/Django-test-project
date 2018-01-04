@@ -1,0 +1,15 @@
+{% extends "core/base.html" %}
+{% block title %}
+    Вопрос {{ question.title }}
+{% endblock %}
+
+{% block content %}
+    <p>{{ question.title }} </p>
+    <div> {{ question.text }}</div>
+
+    <div>{% for answer in question.answers.all %}
+        <p>
+            {{ forloop.counter }}. {{ answer.author }} пишет: {{ answer.text }}
+        </p>
+    {% endfor %}</div>
+{% endblock %}

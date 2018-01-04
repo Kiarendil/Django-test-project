@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>
+        {% block title %} Test site {% endblock %}
+    </title>
+
+</head>
+{% block header %}
+    <h2><a href="{% url 'index' %}">Шапка тестового сайта</a></h2>
+    <p style="text-align: center;"><a href="/admin/">Админка</a></p>
+    <hr />
+{% endblock %}
+
+{% block content %}
+    Добро пожаловать на наш сайт!
+{% endblock %}
+
+{% block footer %}
+<footer>
+    <hr />
+    <p style="text-align: center">Подвал сайта</p>
+</footer>
+{% endblock %}
