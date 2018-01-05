@@ -14,12 +14,13 @@
 {% endblock %}
 
 {% block content %}
-    Добро пожаловать на наш сайт!
+    Добро пожаловать на наш сайт! У нас есть <a href="{% url 'blog_list' %}">различные блоги</a>!
 {% endblock %}
 
 {% block footer %}
 <footer>
     <hr />
+    <p style="text-align: center"> <a href=".."> Наверх</a> </p>
     <p style="text-align: center">Подвал сайта</p>
 </footer>
 {% endblock %}

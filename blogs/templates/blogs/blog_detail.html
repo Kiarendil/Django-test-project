@@ -1,0 +1,17 @@
+{% extends "core/base.html" %}
+{% block title %}
+    Блог автора  {{ blog.author }}
+{% endblock %}
+
+{% block content %}
+    <p>{{ blog.title }} </p>
+    <div>
+        Добро пожаловать в блог автора {{ blog.author }} под названием {{ blog.title }}.
+        Вы можете ознакомиться со следующими постами:
+    </div>
+    <div>
+        {% for post in blog.posts.all %}
+            <p> <a href="{% url 'post' pk=post.id %}">{{ post.title }}</a> </p>
+        {% endfor %}
+    </div>
+{% endblock %}

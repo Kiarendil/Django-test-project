@@ -1,0 +1,18 @@
+{% extends "core/base.html" %}
+{% block title %}
+    Пост  {{ post.author }}
+{% endblock %}
+
+{% block content %}
+    <p>Пост "{{ post.title }}" автора {{ post.blog.author }}. </p>
+    <div>
+        {{ post.text }}
+    </div>
+    <div></div>
+    <div>
+        Комментарии:
+        {% for comment in post.comments.all %}
+        <p>{{ forloop.counter }}. {{ comment.author }} пишет: {{ comment.text }}</p>
+    {% endfor %}
+    </div>
+{% endblock %}
