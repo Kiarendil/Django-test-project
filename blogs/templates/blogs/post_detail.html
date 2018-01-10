@@ -8,11 +8,22 @@
     <div>
         {{ post.text }}
     </div>
-    <div></div>
+
+    <br>
+
     <div>
         Комментарии:
         {% for comment in post.comments.all %}
         <p>{{ forloop.counter }}. {{ comment.author }} пишет: {{ comment.text }}</p>
     {% endfor %}
     </div>
+
+{% endblock %}
+
+{% block footer %}
+<footer>
+    <hr />
+    <p style="text-align: center"> <a href=" {% url 'blog' pk=post.blog.id%}"> Наверх</a> </p>
+    <p style="text-align: center">Подвал сайта</p>
+</footer>
 {% endblock %}
