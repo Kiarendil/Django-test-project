@@ -83,8 +83,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'techno_web',
-        'USER': 'kirillivanov',
-        'PASSWORD': 123456,
+        'USER': 'root',
+        'PASSWORD': '',
         'HOST': 'localhost',
     }
 }
